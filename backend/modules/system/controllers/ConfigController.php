@@ -8,6 +8,7 @@ use common\models\searchs\ConfigSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\helpers\ArrayHelper;
 /**
  * ConfigController implements the CRUD actions for Config model.
  */
@@ -84,6 +85,7 @@ class ConfigController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post())) {
+			$model->updated_at = time();
 			if($model->save()){
 				return $this->redirect(['view', 'id' => $model->id]);
 			}
@@ -119,6 +121,13 @@ class ConfigController extends Controller
         $data = Yii::$app->request->post();
         if($data){
             $model = new Config;
+			$system_config = $model::find()->select('id')->where(['status'=>0])->asArray()->all();
+			$system_config_id = ArrayHelper::getColumn($system_config, 'id');
+			foreach ($data['keys'] as $value) {
+				if(in_array($value, $system_config_id)){
+					return json_encode(['code'=>400,"msg"=>"批量删除中有系统配置项，删除失败"]);
+				}
+			}
             $count = $model->deleteAll(["in","id",$data['keys']]);
             if($count>0){
                 return json_encode(['code'=>200,"msg"=>"删除成功"]);

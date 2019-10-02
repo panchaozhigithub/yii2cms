@@ -26,8 +26,7 @@ class QueryParamAuth extends AuthMethod
      */
     public function authenticate($user, $request, $response)
     {
-        $accessToken = $request->get($this->tokenParam);
-		$accessToken = $request->headers->get('access_token');
+        $accessToken = $request->headers->get($this->tokenParam);
         if (is_string($accessToken)) {
             $identity = $user->loginByAccessToken($accessToken, get_class($this));
             if ($identity !== null) {

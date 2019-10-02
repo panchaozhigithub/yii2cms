@@ -10,7 +10,7 @@ class ComposerStaticInit9e3967ea6a1026d001a584b49fb64080
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         '2cffec82183ee1cea088009cef9a6fc3' => __DIR__ . '/..' . '/ezyang/htmlpurifier/library/HTMLPurifier.composer.php',
-        'fe1bcd0336136e435eaf197895daf81a' => __DIR__ . '/..' . '/nikic/php-parser/lib/bootstrap.php',
+        '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
@@ -26,14 +26,22 @@ class ComposerStaticInit9e3967ea6a1026d001a584b49fb64080
             'yii\\debug\\' => 10,
             'yii\\composer\\' => 13,
             'yii\\bootstrap\\' => 14,
-            'yii\\apidoc\\' => 11,
             'yii\\' => 4,
+        ),
+        'p' => 
+        array (
+            'phpDocumentor\\Reflection\\' => 25,
         ),
         'c' => 
         array (
-            'cebe\\markdown\\latex\\' => 20,
             'cebe\\markdown\\' => 14,
-            'cebe\\jssearch\\' => 14,
+        ),
+        'W' => 
+        array (
+            'Webmozart\\Assert\\' => 17,
+            'WePay\\' => 6,
+            'WeMini\\' => 7,
+            'WeChat\\' => 7,
         ),
         'S' => 
         array (
@@ -72,6 +80,10 @@ class ComposerStaticInit9e3967ea6a1026d001a584b49fb64080
             'Codeception\\Extension\\' => 22,
             'Codeception\\' => 12,
         ),
+        'A' => 
+        array (
+            'AliPay\\' => 7,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -89,7 +101,7 @@ class ComposerStaticInit9e3967ea6a1026d001a584b49fb64080
         ),
         'yii\\debug\\' => 
         array (
-            0 => __DIR__ . '/..' . '/yiisoft/yii2-debug',
+            0 => __DIR__ . '/..' . '/yiisoft/yii2-debug/src',
         ),
         'yii\\composer\\' => 
         array (
@@ -99,25 +111,35 @@ class ComposerStaticInit9e3967ea6a1026d001a584b49fb64080
         array (
             0 => __DIR__ . '/..' . '/yiisoft/yii2-bootstrap/src',
         ),
-        'yii\\apidoc\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/yiisoft/yii2-apidoc',
-        ),
         'yii\\' => 
         array (
             0 => __DIR__ . '/..' . '/yiisoft/yii2',
         ),
-        'cebe\\markdown\\latex\\' => 
+        'phpDocumentor\\Reflection\\' => 
         array (
-            0 => __DIR__ . '/..' . '/cebe/markdown-latex',
+            0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
         ),
         'cebe\\markdown\\' => 
         array (
             0 => __DIR__ . '/..' . '/cebe/markdown',
         ),
-        'cebe\\jssearch\\' => 
+        'Webmozart\\Assert\\' => 
         array (
-            0 => __DIR__ . '/..' . '/cebe/js-search/lib',
+            0 => __DIR__ . '/..' . '/webmozart/assert/src',
+        ),
+        'WePay\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zoujingli/wechat-developer/WePay',
+        ),
+        'WeMini\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zoujingli/wechat-developer/WeMini',
+        ),
+        'WeChat\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zoujingli/wechat-developer/WeChat',
         ),
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
@@ -196,19 +218,13 @@ class ComposerStaticInit9e3967ea6a1026d001a584b49fb64080
             0 => __DIR__ . '/..' . '/codeception/base/src/Codeception',
             1 => __DIR__ . '/..' . '/codeception/stub/src',
         ),
+        'AliPay\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zoujingli/wechat-developer/AliPay',
+        ),
     );
 
     public static $prefixesPsr0 = array (
-        'p' => 
-        array (
-            'phpDocumentor' => 
-            array (
-                0 => __DIR__ . '/..' . '/phpdocumentor/reflection/src',
-                1 => __DIR__ . '/..' . '/phpdocumentor/reflection/tests/unit',
-                2 => __DIR__ . '/..' . '/phpdocumentor/reflection/tests/mocks',
-                3 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
-            ),
-        ),
         'P' => 
         array (
             'Prophecy\\' => 
@@ -216,20 +232,8 @@ class ComposerStaticInit9e3967ea6a1026d001a584b49fb64080
                 0 => __DIR__ . '/..' . '/phpspec/prophecy/src',
             ),
         ),
-        'M' => 
-        array (
-            'MikeVanRiel' => 
-            array (
-                0 => __DIR__ . '/..' . '/mikevanriel/text-to-latex/src',
-                1 => __DIR__ . '/..' . '/mikevanriel/text-to-latex/tests/unit',
-            ),
-        ),
         'H' => 
         array (
-            'Highlight\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/scrivo/highlight.php',
-            ),
             'HTMLPurifier' => 
             array (
                 0 => __DIR__ . '/..' . '/ezyang/htmlpurifier/library',
@@ -717,6 +721,7 @@ class ComposerStaticInit9e3967ea6a1026d001a584b49fb64080
         'SebastianBergmann\\ResourceOperations\\ResourceOperations' => __DIR__ . '/..' . '/sebastian/resource-operations/src/ResourceOperations.php',
         'SebastianBergmann\\Version' => __DIR__ . '/..' . '/sebastian/version/src/Version.php',
         'Text_Template' => __DIR__ . '/..' . '/phpunit/php-text-template/src/Template.php',
+        'We' => __DIR__ . '/..' . '/zoujingli/wechat-developer/We.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
